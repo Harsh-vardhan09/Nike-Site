@@ -1,16 +1,26 @@
-# React + Vite
+# Nike Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- **This is a Content Management System(CMS) of NIKE using React and tailwind.
+- This uses tailwind version 3.1 which uses config site and we are using special component as utilities
+- We place all the exports in the index.js to keep code clean and this exports directly from the folder since its index.js
+- In a folder it looks for package.json then for main and after if index.js which is its modular path.
+- Using clean architecture and building `npm run build` to get dist folder
 
-Currently, two official plugins are available:
+# CSS:-
+- Here we are using tailwind for css to give clean and fast.
+- **We are also using dynamically changing css in case of cards and using index.css as well as config file.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+<div className={`border-2 rounded-xl ${bigShoeImg===imgUrl?'border-coral-red':'border-transparent'}`}>
+</div>
+```
+- we are using useState hook to do the image change for the functioning of the image change.
+- Using apply for using premade tailwind css to use.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Phases:-
+- ***Sections: each of the major of the page has a seperate in this we export them all form the index.js file.
+- **Components: each of the component used like button, cards are stored here.
+- This is used for reusability of the component. 
+- **Constant: For storing the data which we can later import from and map the constant data so its clean code for use.
+- **assets: This is where all the assets like image /icons are stored and with index.js in it these exports all images together for cleaner coding.
